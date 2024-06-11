@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: masgJardineria
+  labels:
+    zone: prod
+    version: v1
+spec:
+  containers:
+    - name: masgJardineriadb   
+      image: postgres
+      ports: 
+        # - containerPort: 5433
+        - protocol: TCP
+            port: 5433
+            targetPort: 5432
+      env:
+        - name: POSTGRES_DB
+          value:  masgJardineria
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: paswJardineria

@@ -19,7 +19,7 @@ export class GamaService {
       }
     
       async findOne(id: number): Promise<Gama> {
-        return this.gamaRepository.findOne(id, { relative: ['productos'] });
+        return this.gamaRepository.findOne(id, { RelationId: ['productos']} );
       }
 }
 

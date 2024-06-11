@@ -27,6 +27,6 @@ export class ProductoService {
       }
     
       async findOne(id: number): Promise<Producto> {
-        return this.productoRepository.findOne((id), { relations: ['gama'] });
+        return this.productoRepository.findOne(id, { relations: ['gama'] });
       }
 }

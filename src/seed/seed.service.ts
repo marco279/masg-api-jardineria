@@ -14,12 +14,12 @@ export class SeedService {
     ){}
 
     async seed(){
-        for (const gamaData of gamasData){
+        for (const gamaData of gamaData){
             const gama = new Gama();
             gama.nombre = gamaData.nombre;
             await this.gamaRepository.save(gama);
         }
-        for (const productoData of productosData){
+        for (const productoData of productoData){
             const producto = new Producto();
             producto.nombre = productoData.nombre;
             producto.descripcion = productoData.descripcion;
