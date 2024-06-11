@@ -1,0 +1,7 @@
+[
+    { "nombre": "Martillo", "descripcion": "Martillo de acero", "precio": 10, "gama": "Herramientas" },
+    { "nombre": "Taladro", "descripcion": "Taladro eléctrico", "precio": 50, "gama": "Herramientas" },
+    { "nombre": "Bomba de Riego", "descripcion": "Martillo de acero", "precio": 10, "gama": "Electrodomesticos" },
+    { "nombre": "Retroescabadora", "descripcion": "Taladro eléctrico", "precio": 50, "gama": "Electrodomesticos" }
+  ]
+  
