@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  db:
+  db_Jardineria:
     image: postgres:14.3
     restart: always
     environment:

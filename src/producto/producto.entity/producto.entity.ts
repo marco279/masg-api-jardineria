@@ -16,6 +16,6 @@ export class Producto {
   @Column()
   precio: number;
 
-  @ManyToOne(() => Gama, gama => gama.productos)
+  @ManyToOne(() => Gama, (gama: { productos: any; }) => gama.productos)
   gama: Gama;
 }

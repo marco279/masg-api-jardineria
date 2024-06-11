@@ -1,15 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Gama } from './gama.entity/gama.entity';
-import { RelationId, Repository } from 'typeorm';
 import { GamaDto } from './dto/gama.dto/gama.dto';
-import { relative } from 'path';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class GamaService {
     constructor(
         @InjectRepository(Gama)
-        private readonly gamaRepository: Repository<Gama>,
+        private readonly gamaRepository: Repository<Gama>
     ){} 
 
     async create(createGamaDto: GamaDto): Promise<Gama> {
@@ -19,7 +18,7 @@ export class GamaService {
       }
     
       async findOne(id: number): Promise<Gama> {
-        return this.gamaRepository.findOne(id, { RelationId: ['productos']} );
+        return this.gamaRepository.findOne(id, { relations: ['productos']} );
       }
 }
 

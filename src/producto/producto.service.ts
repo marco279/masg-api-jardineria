@@ -20,7 +20,7 @@ export class ProductoService {
         producto.descripcion = createProductoDto.descripcion;
         producto.precio = createProductoDto.precio;
     
-        const gama = await this.gamaRepository.findOne(createProductoDto.gamaId);
+        const gama = await this.gamaRepository.findOne(createProductoDto.nombre);
         producto.gama = gama;
     
         return this.productoRepository.save(producto);
