@@ -10,7 +10,7 @@ spec:
     - name: masgJardineriadb   
       image: postgres
       ports: 
-        # - containerPort: 5433
+        - containerPort: 5432
         - protocol: TCP
             port: 5433
             targetPort: 5432
